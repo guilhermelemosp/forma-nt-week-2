@@ -1,6 +1,7 @@
 package com.example.exercises.exercise2;
 
 import com.example.exercises.exercise2.utils.EncryptedText;
+import com.example.exercises.exercise2.utils.DecryptedText;
 
 public class CaesarCipher {
     
@@ -9,7 +10,7 @@ public class CaesarCipher {
     }
 
     public static String decrypt(String text, int key) {
-        return EncryptedText.decrypt(text, key);
+        return DecryptedText.decrypt(text, key);
     }
 }
 
