@@ -13,5 +13,3 @@ public class CaesarCipher {
         return DecryptedText.decrypt(text, key);
     }
 }
-
-
