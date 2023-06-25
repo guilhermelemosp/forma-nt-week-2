@@ -1,18 +1,17 @@
-// crie uma classe e implemente esta interface
-/*USUARIO PREMIUM
-  getValorDesconto = ganha 30% se o valorProduto for maior que 200 reais
-  getTipoUsuario = retorna que é Usuário premium
-  getValorFreteDesconto = ganha frete grátis se o valorProduto for maior que 100 reais */
 package com.example.exercises.exercise4;
 import com.example.exercises.exercise4.interfaces.User;
 
 public class PremiumUser implements User{
+
+    // private double desconto;
+
     @Override
     public double getValorDesconto(double valorProduto) {
+        double desconto = 0;
         if (valorProduto > 200) {
-            return valorProduto * 0.3;
+            desconto = valorProduto * 0.3;
         }
-        return 0;
+        return desconto;
     }
 
     @Override

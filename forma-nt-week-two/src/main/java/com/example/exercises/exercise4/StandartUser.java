@@ -3,12 +3,15 @@ import com.example.exercises.exercise4.interfaces.User;
 
 public class StandartUser implements User{
 
+    private double desconto;
+
        @Override
     public double getValorDesconto(double valorProduto) {
+        double desconto = 0;
         if (valorProduto > 200) {
-            return valorProduto * 0.15;
+            desconto =  valorProduto * 0.15;
         }
-        return 0;
+        return desconto;
     }
 
     @Override
@@ -19,9 +22,9 @@ public class StandartUser implements User{
     @Override
     public double getValorFreteDesconto(double valorFrete, double valorProduto) {
         if (valorProduto > 200) {
-            return valorFrete * 0.90;
+            return Math.max(0, valorFrete * 0.90 - desconto); 
         }
-        return valorProduto;
+        return Math.max(0, valorFrete - desconto);
     }
     
 }

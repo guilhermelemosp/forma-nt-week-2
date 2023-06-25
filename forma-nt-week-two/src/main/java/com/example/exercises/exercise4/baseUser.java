@@ -6,14 +6,14 @@ public class BaseUser implements User {
 
     private double desconto;
 
-@Override
-public double getValorDesconto(double valorProduto) {
-    double desconto = 0;
-    if (valorProduto > 300) {
-        desconto = valorProduto * 0.05;
+    @Override
+    public double getValorDesconto(double valorProduto) {
+        double desconto = 0;
+        if (valorProduto > 300) {
+            desconto = valorProduto * 0.05;
+        }
+        return desconto;
     }
-    return desconto;
-}
 
     @Override
     public String getTipoUsuario() {
@@ -25,6 +25,6 @@ public double getValorDesconto(double valorProduto) {
         if (valorProduto > 300) {
             return Math.max(0, valorFrete * 0.95 - desconto);
         }
-        return Math.max(0, valorFrete - desconto);
+            return Math.max(0, valorFrete - desconto);
     }
 }

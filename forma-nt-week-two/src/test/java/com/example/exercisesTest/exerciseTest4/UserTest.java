@@ -16,8 +16,9 @@ public class UserTest {
         double valorFrete = scanner.nextDouble();
 
         User user1 = new BaseUser();
-        User user2 = new PremiumUser();
-        User user3 = new StandartUser();
+        User user2 = new StandartUser();
+        User user3 = new PremiumUser();
+
 
         System.out.println("----------------------------------------------");
 
@@ -30,18 +31,20 @@ public class UserTest {
         
         System.out.println("----------------------------------------------");
 
+        System.out.println("Tipo de usuário: " + user2.getTipoUsuario());
+
+        System.out.println("Valor final do produto: " + (valorProduto - user2.getValorDesconto(valorProduto)) + " R$");
+        System.out.println("Valor final do frete: " + user2.getValorFreteDesconto(valorFrete, valorProduto));
+
+        System.out.println("Total a se Pagar: " + (valorProduto - user2.getValorDesconto(valorProduto) + user2.getValorFreteDesconto(valorFrete, valorProduto)) + " R$");
+
+        System.out.println("----------------------------------------------");
       
-        // System.out.println("Tipo de usuário: " + user3.getTipoUsuario());
-        // System.out.println("Valor do desconto no produto: " + user3.getValorDesconto(valorProduto));
-        // System.out.println("Valor do desconto no frete: " + user3.getValorFreteDesconto(valorFrete, valorProduto));
+        System.out.println("Tipo de usuário: " + user3.getTipoUsuario());
 
-        // System.out.println("----------------------------------------------");
-
-        //   System.out.println("Tipo de usuário: " + user2.getTipoUsuario());
-        // System.out.println("Valor do desconto no produto: " + user2.getValorDesconto(valorProduto));
-        // System.out.println("Valor do desconto no frete: " + user2.getValorFreteDesconto(valorFrete, valorProduto));
-
-        // System.out.println("----------------------------------------------");
+        System.out.println("Valor final do produto: " + (valorProduto - user3.getValorDesconto(valorProduto)) + " R$");
+        System.out.println("Valor final do frete: " + user3.getValorFreteDesconto(valorFrete, valorProduto));
+        System.out.println("Total a se Pagar: " + (valorProduto - user3.getValorDesconto(valorProduto) + user3.getValorFreteDesconto(valorFrete, valorProduto)) + " R$");
 
     }
 }
