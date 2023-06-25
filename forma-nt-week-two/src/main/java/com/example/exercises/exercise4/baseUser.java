@@ -2,27 +2,29 @@ package com.example.exercises.exercise4;
 
 import com.example.exercises.exercise4.interfaces.User;
 
-public class baseUser implements User{
+public class BaseUser implements User {
 
-    @Override
-    public double getValorDesconto(double valorProduto) {
-        if (valorProduto > 300) {
-            return valorProduto * 0.05;
-        }
-        return 0;
+    private double desconto;
+
+@Override
+public double getValorDesconto(double valorProduto) {
+    double desconto = 0;
+    if (valorProduto > 300) {
+        desconto = valorProduto * 0.05;
     }
+    return desconto;
+}
 
     @Override
     public String getTipoUsuario() {
-         return "Usuário do plano Base";
+        return "Usuário BASE";
     }
 
     @Override
     public double getValorFreteDesconto(double valorFrete, double valorProduto) {
         if (valorProduto > 300) {
-            return valorFrete * 0.95;
+            return Math.max(0, valorFrete * 0.95 - desconto);
         }
-        return valorProduto;
+        return Math.max(0, valorFrete - desconto);
     }
-    
 }

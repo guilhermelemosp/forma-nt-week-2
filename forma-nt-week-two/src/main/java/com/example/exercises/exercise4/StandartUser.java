@@ -13,7 +13,7 @@ public class StandartUser implements User{
 
     @Override
     public String getTipoUsuario() {
-         return "Usuário do plano Standart";
+         return "Usuário STANDARD";
     }
 
     @Override
