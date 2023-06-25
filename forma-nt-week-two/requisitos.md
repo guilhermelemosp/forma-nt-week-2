@@ -36,10 +36,12 @@ USUARIO BASE
   getValorDesconto = ganha 5% se o valorProduto for maior que 300 reais
   getTipoUsuario = retorna que é base
   getValorFreteDesconto = ganha 5% se o valorProduto for maior que 300 reais
+
 USUARIO STANDART
   getValorDesconto = ganha 15% se o valorProduto for maior que 200 reais
   getTipoUsuario = retorna que é standart
   getValorFreteDesconto = ganha 10% se o valorProduto for maior que 200 reais
+  
 USUARIO PREMIUM
   getValorDesconto = ganha 30% se o valorProduto for maior que 200 reais
   getTipoUsuario = retorna que é premium
